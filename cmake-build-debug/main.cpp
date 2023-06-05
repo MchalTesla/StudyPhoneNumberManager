@@ -67,7 +67,6 @@ int main()
                 break;
             case 10:				//清空学生信息
                 mainclass->closeAll();
-                cout << "清空成功" << endl;
                 break;
             case 0:				//退出
                 cout << "1.保存后退出 2.不保存直接退出 3.取消" << endl;
