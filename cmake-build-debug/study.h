@@ -18,6 +18,8 @@ public:
     Study* nextList() override;
     Study* lastList() override;
     Study* numberToList(int number) override;
+    void copy(void* newnode, void* oldnode);
+    Study* test_NewNode();
     string studyName;
     string studyPhone;
     int studyAge = 0;

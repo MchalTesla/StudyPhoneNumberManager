@@ -19,12 +19,14 @@ public:
     virtual BaseList* lastList();
     virtual BaseList* numberToList(int number);
     int listLong();
+    virtual void copy(void* newnode, void* oldnode);
     void insertBefore(void* newnode, void* node);
     void insertAfter(void* newnode, void* node);
     void push(void* newnode);
     void deleteList(void* node);
     void deleteList();
-    static void exchangeList(void* newnode, void* node);
+    void exchangeList(void* newnode, void* node);
+    virtual void* test_NewNode() = 0;
 };
 
 

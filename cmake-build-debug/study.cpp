@@ -19,13 +19,24 @@ Study* Study::lastList(){
 Study* Study::numberToList(int number){
     return (Study*)this->BaseList::numberToList(number);
 }
+Study* Study::test_NewNode(){
+    Study* newNode = new Study;
+    return newNode;
+}
+void Study::copy(void* newnode, void* oldnode){
+    BaseList::copy(newnode, oldnode);
+    ((Study*)newnode)->studyName=((Study*)oldnode)->studyName;
+    ((Study*)newnode)->studyPhone=((Study*)oldnode)->studyPhone;
+    ((Study*)newnode)->studyAge=((Study*)oldnode)->studyAge;
+    ((Study*)newnode)->studyGender=((Study*)oldnode)->studyGender;
+}
 void Study::ascSort(){
     int i,j,gap;
-    BaseList* key = nullptr;
-    for(gap = this->listLong(); gap > 0; gap /= 2){
+    Study* key = new Study;
+    for(gap = this->listLong()/2; gap > 0; gap /= 2){
         for(i = gap; i < this->listLong(); i += gap){
-            key = this->numberToList(i);
-            for(j = i - gap; j >= 0 && this->numberToList(j) > key; j -= gap){
+            this->copy(key, this->numberToList(i));
+            for(j = i - gap; j >= 0 && this->numberToList(j)->studyAge > key->studyAge; j -= gap){
                 this->exchangeList(this->numberToList(j), this->numberToList(j+gap));
             }
             this->exchangeList(key, this->numberToList(j+gap));
@@ -33,12 +44,12 @@ void Study::ascSort(){
     }
 }
 void Study::descSort(){
-    int i,j,gap;
-    BaseList* key = nullptr;
-    for(gap = this->listLong(); gap > 0; gap /= 2){
+    int i, j, gap;
+    Study* key = new Study;
+    for(gap = this->listLong() / 2; gap > 0; gap /= 2){
         for(i = gap; i < this->listLong(); i += gap){
-            key = this->numberToList(i);
-            for(j = i - gap; j >= 0 && this->numberToList(j) < key; j -= gap){
+            this->copy(key, this->numberToList(i));
+            for(j = i - gap; j >= 0 && this->numberToList(j)->studyAge < key->studyAge; j -= gap){
                 this->exchangeList(this->numberToList(j), this->numberToList(j+gap));
             }
             this->exchangeList(key, this->numberToList(j+gap));
