@@ -18,8 +18,11 @@ MainClass::~MainClass(){
 }
 void MainClass::buildNewNode(){
     Study* temp = new Study;
-    this->add(temp);
-    this->study->push(temp);
+    if(this->add(temp) == true){
+        this->study->push(temp);
+    }else{
+        delete temp;
+    }
 }
 bool MainClass::findRepeat(string &tname){
     Study* temp = this->study->headerList();
