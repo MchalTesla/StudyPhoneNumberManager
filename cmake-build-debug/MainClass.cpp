@@ -359,11 +359,15 @@ void MainClass::ageDescSort(){
     this->show();
 }
 void MainClass::closeAll(){
-    Study* temp = this->study->headerList();
-    while(temp != nullptr){
-        Study* lastTemp = temp;
-        temp = temp->nextList();
-        delete lastTemp;
+    cout << "确认退出?(1.确认,0.取消)" << endl;
+    if(this->tools->choose(0, 1) == 1) {
+        Study *temp = this->study->headerList();
+        while (temp != nullptr) {
+            Study *lastTemp = temp;
+            temp = temp->nextList();
+            delete lastTemp;
+        }
+        this->study = new Study;
     }
-    this->study = new Study;
+    return;
 }

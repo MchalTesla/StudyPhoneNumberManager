@@ -11,9 +11,11 @@ int begin(){
     cout << "3.删除学生信息\n";
     cout << "4.搜索学生信息\n";
     cout << "5.编辑学生信息\n";
-    cout << "7.导入学生信息\n";
-    cout << "8.保存学生信息\n";
-    cout << "9.清空学生信息\n";
+    cout << "6.导入学生信息\n";
+    cout << "7.保存学生信息\n";
+    cout << "8.年龄升序排序\n";
+    cout << "9.年龄降序排序\n";
+    cout << "10.清空学生信息\n";
     cout << "0.退出学生系统\n\n";
     cout << "请选择：";
     Tools* tools = new Tools;
@@ -57,7 +59,13 @@ int main()
             case 7:				//保存学生信息
                 mainclass->savefile( false);
                 break;
-            case 8:				//清空学生信息
+            case 8:
+                mainclass->ageAscSort();
+                break;
+            case 9:
+                mainclass->ageDescSort();
+                break;
+            case 10:				//清空学生信息
                 mainclass->closeAll();
                 cout << "清空成功" << endl;
                 break;

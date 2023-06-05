@@ -48,11 +48,11 @@ int Tools::choose(int left, int right){
     return choosesta;
 }
 string Tools::cinstr(int left, int right){
-    string out0 = "It must be in pure Chinese and the length must be between";
+    string out0 = "It must be in pure Chinese and the length must be between ";
     string out1 = to_string(left);
-    string out2 = "to";
+    string out2 = " to ";
     string out3 = to_string(right);
-    string out4 = "Chinese character, please re-enter\n";
+    string out4 = " Chinese character, please re-enter\n";
     out0 = out0 + out1 + out2 + out3 + out4;
     string name;
     while (!(cin >> name) || (getchar() == 10 ? ungetc(10, stdin), false : true) || !Filtration(name) || name.length() < left*modelength || name.length() > right*modelength) {	//通过判断getc的字符是不是回车，就可以判断stdin缓冲区是否为空
