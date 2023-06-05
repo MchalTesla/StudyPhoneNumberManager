@@ -67,7 +67,7 @@ void MainClass::putstu(Study* node){
     cout << node->studyName << "\t";
     cout << node->studyPhone << "\t";
     cout << node->studyGender << "\t";
-    cout << node->studyAge << "\t";
+    cout << node->studyAge << "\n";
 }
 void MainClass::show(){
     if(this->study->listLong() > 1){
