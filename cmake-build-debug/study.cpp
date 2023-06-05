@@ -19,7 +19,7 @@ Study* Study::lastList(){
 Study* Study::numberToList(int number){
     return (Study*)this->BaseList::numberToList(number);
 }
-Study* Study::test_NewNode(){
+Study* void::test_NewNode(){
     Study* newNode = new Study;
     return newNode;
 }
