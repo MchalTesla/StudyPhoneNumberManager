@@ -362,7 +362,7 @@ void MainClass::ageDescSort(){
     this->show();
 }
 void MainClass::closeAll(){
-    cout << "确认退出?(1.确认,0.取消)" << endl;
+    cout << "确认?(1.确认,0.取消)" << endl;
     if(this->tools->choose(0, 1) == 1) {
         Study *temp = this->study->headerList();
         while (temp != nullptr) {
