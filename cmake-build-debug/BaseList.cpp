@@ -36,14 +36,14 @@ BaseList* BaseList::numberToList(int number){
     if(number > this->listLong()){
         return(nullptr);
     }
-    BaseList* node = this->headerList();
+    BaseList* node = this->headerList()->nextList();
     for(int pointer = 0; pointer <= number; pointer ++){
         node = node->nextList();
     }
     return node;
 }
 int BaseList::listLong(){
-    BaseList* node = this->headerList();
+    BaseList* node = this->headerList()->nextList();
     int listNumber = 0;
     do{
         listNumber ++;

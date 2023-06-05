@@ -70,7 +70,7 @@ void MainClass::putstu(Study* node){
     cout << node->studyAge << "\n";
 }
 void MainClass::show(){
-    if(this->study->listLong() > 1){
+    if(this->study->listLong() > 0){
         Study* temp = this->study->headerList();
         while(temp->nextList() != nullptr){
             temp = temp->nextList();
@@ -82,7 +82,7 @@ void MainClass::show(){
     cout << endl;
 }
 void MainClass::search(){
-    if(this->study->listLong() > 1){
+    if(this->study->listLong() > 0){
         cout << "请输入要查询学生的电话号或者姓名，输入“0”退出" << endl;
         string TNAME;
         cin >> TNAME;
@@ -123,7 +123,7 @@ void MainClass::search(){
     return;
 }
 void MainClass::editStu(){
-    if (this->study->listLong() > 1){
+    if (this->study->listLong() > 0){
         cout << "请输入编辑学生的学号或者姓名,输入“0”返回" << endl;
         string TNAME;
         cin >> TNAME;
@@ -179,7 +179,7 @@ void MainClass::editStu(){
     }
 }
 void MainClass::deleteStu(){
-    if(this->study->listLong() > 1){
+    if(this->study->listLong() > 0){
         cout << "请输入需要删除学生的电话号或者姓名,输入“0”返回" << endl;
         string TNAME;
         cin >> TNAME;
@@ -293,7 +293,7 @@ void MainClass::readfile(){
     }
 }
 bool MainClass::savefile(bool force){
-    if (this->study->listLong() <= 1 && !force) {		//判断链表中是否有属于
+    if (this->study->listLong() < 1 && !force) {		//判断链表中是否有属于
         cout << "无数据" << endl;
         return false;
     }
@@ -348,7 +348,7 @@ bool MainClass::can_open(){
     }
 }
 void MainClass::allStudyNumber(){
-    cout << "学生总数:" << this->study->listLong() - 1 << endl;
+    cout << "学生总数:" << this->study->listLong() << endl;
 }
 void MainClass::ageAscSort(){
     this->study->ascSort();

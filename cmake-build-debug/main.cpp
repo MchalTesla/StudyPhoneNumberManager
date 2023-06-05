@@ -19,7 +19,7 @@ int begin(){
     cout << "0.退出学生系统\n\n";
     cout << "请选择：";
     Tools* tools = new Tools;
-    int ch = tools->choose(0, 9);
+    int ch = tools->choose(0, 10);
     delete tools;
     return ch;
 }
