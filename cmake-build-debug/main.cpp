@@ -16,10 +16,11 @@ int begin(){
     cout << "8.年龄升序排序\n";
     cout << "9.年龄降序排序\n";
     cout << "10.清空学生信息\n";
+    cout << "11.查询学生人数\n";
     cout << "0.退出学生系统\n\n";
     cout << "请选择：";
     Tools* tools = new Tools;
-    int ch = tools->choose(0, 10);
+    int ch = tools->choose(0, 11);
     delete tools;
     return ch;
 }
@@ -67,6 +68,9 @@ int main()
                 break;
             case 10:				//清空学生信息
                 mainclass->closeAll();
+                break;
+            case 11:
+                mainclass->allStudyNumber();
                 break;
             case 0:				//退出
                 cout << "1.保存后退出 2.不保存直接退出 3.取消" << endl;
