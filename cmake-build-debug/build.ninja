@@ -51,31 +51,31 @@ build cmake_object_order_depends_target_PhoneNumberManager: phony || CMakeFiles/
 
 build CMakeFiles/PhoneNumberManager.dir/BaseList.cpp.obj: CXX_COMPILER__PhoneNumberManager_Debug F$:/git/PhoneNumberManager/cmake-build-debug/BaseList.cpp || cmake_object_order_depends_target_PhoneNumberManager
   DEP_FILE = CMakeFiles\PhoneNumberManager.dir\BaseList.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PhoneNumberManager.dir
   OBJECT_FILE_DIR = CMakeFiles\PhoneNumberManager.dir
 
 build CMakeFiles/PhoneNumberManager.dir/study.cpp.obj: CXX_COMPILER__PhoneNumberManager_Debug F$:/git/PhoneNumberManager/cmake-build-debug/study.cpp || cmake_object_order_depends_target_PhoneNumberManager
   DEP_FILE = CMakeFiles\PhoneNumberManager.dir\study.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PhoneNumberManager.dir
   OBJECT_FILE_DIR = CMakeFiles\PhoneNumberManager.dir
 
 build CMakeFiles/PhoneNumberManager.dir/MainClass.cpp.obj: CXX_COMPILER__PhoneNumberManager_Debug F$:/git/PhoneNumberManager/cmake-build-debug/MainClass.cpp || cmake_object_order_depends_target_PhoneNumberManager
   DEP_FILE = CMakeFiles\PhoneNumberManager.dir\MainClass.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PhoneNumberManager.dir
   OBJECT_FILE_DIR = CMakeFiles\PhoneNumberManager.dir
 
 build CMakeFiles/PhoneNumberManager.dir/tools.cpp.obj: CXX_COMPILER__PhoneNumberManager_Debug F$:/git/PhoneNumberManager/cmake-build-debug/tools.cpp || cmake_object_order_depends_target_PhoneNumberManager
   DEP_FILE = CMakeFiles\PhoneNumberManager.dir\tools.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PhoneNumberManager.dir
   OBJECT_FILE_DIR = CMakeFiles\PhoneNumberManager.dir
 
 build CMakeFiles/PhoneNumberManager.dir/main.cpp.obj: CXX_COMPILER__PhoneNumberManager_Debug F$:/git/PhoneNumberManager/cmake-build-debug/main.cpp || cmake_object_order_depends_target_PhoneNumberManager
   DEP_FILE = CMakeFiles\PhoneNumberManager.dir\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PhoneNumberManager.dir
   OBJECT_FILE_DIR = CMakeFiles\PhoneNumberManager.dir
 

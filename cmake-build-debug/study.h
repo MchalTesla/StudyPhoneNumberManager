@@ -26,7 +26,7 @@ public:
     int studyGender = 0;
 
     void ascSort();
-    void descSort();
+    void descSort(int left, int right);
 };
 
 

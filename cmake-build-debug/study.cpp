@@ -43,16 +43,41 @@ void Study::ascSort(){
         }
     }
 }
-void Study::descSort(){
-    int i, j, gap;
+//void Study::descSort(){
+//    int i, j, gap;
+//    Study* key = new Study;
+//    for(gap = this->listLong() / 2; gap > 0; gap /= 2){
+//        for(i = gap; i < this->listLong(); i += gap){
+//            this->copy(key, this->numberToList(i));
+//            for(j = i - gap; j >= 0 && this->numberToList(j)->studyAge < key->studyAge; j -= gap){
+//                this->exchangeList(this->numberToList(j), this->numberToList(j+gap));
+//            }
+//            this->exchangeList(key, this->numberToList(j+gap));
+//        }
+//    }
+//}
+void Study::descSort(int left, int right) {
+    if (left >= right) {
+        return;
+    }
     Study* key = new Study;
-    for(gap = this->listLong() / 2; gap > 0; gap /= 2){
-        for(i = gap; i < this->listLong(); i += gap){
-            this->copy(key, this->numberToList(i));
-            for(j = i - gap; j >= 0 && this->numberToList(j)->studyAge < key->studyAge; j -= gap){
-                this->exchangeList(this->numberToList(j), this->numberToList(j+gap));
-            }
-            this->exchangeList(key, this->numberToList(j+gap));
+    this->copy(key, this->numberToList(left));
+    int i = left, j = right;
+    while (i < j) {
+        while (i < j && this->numberToList(j)->studyAge <= key->studyAge) {
+            j--;
+        }
+        if (i < j) {
+            this->exchangeList(this->numberToList(j), this->numberToList(i));
+        }
+        while (i < j && this->numberToList(i)->studyAge > key->studyAge) {
+            i++;
+        }
+        if (i < j) {
+            this->exchangeList(this->numberToList(j), this->numberToList(i));
         }
     }
+    this->exchangeList(key, this->numberToList(i));
+    this->descSort(left, i - 1);
+    this->descSort(i + 1, right);
 }

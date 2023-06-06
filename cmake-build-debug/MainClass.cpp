@@ -358,7 +358,7 @@ void MainClass::ageAscSort(){
     this->show();
 }
 void MainClass::ageDescSort(){
-    this->study->descSort();
+    this->study->descSort(0, this->study->listLong()-1);
     this->show();
 }
 void MainClass::closeAll(){
