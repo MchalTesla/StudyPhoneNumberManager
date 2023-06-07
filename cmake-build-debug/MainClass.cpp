@@ -59,7 +59,7 @@ bool MainClass::add(Study *node){
     }
     node->studyPhone = stupho;
     cout << "姓名:\t";
-    node->studyName = this->tools->cinstr(2, 4);
+    node->studyName = this->tools->cinstr(2, 8);
     cout << "性别(女-0,男-1):\t";
     node->studyGender = this->tools->choose(0,1);
     cout << "年龄:\t";
