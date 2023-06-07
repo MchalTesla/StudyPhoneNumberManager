@@ -70,7 +70,7 @@ void MainClass::putstu(Study* node){
     cout << node->studyName << "\t";
     cout << node->studyPhone << "\t";
     cout << node->studyAge << "\t";
-    cout << node->studyGender << "\n";
+    cout << (node->studyGender == 0 ? "女" : "男") << "\n";
 }
 void MainClass::show(){
     if(this->study->listLong() > 0){
