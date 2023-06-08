@@ -4,17 +4,17 @@
 ### Linux & MacOS
 请在Linux & MacOS上执行如下指令
 ```
-#拉取源码
+# 拉取源码
 git clone https://github.com/MchalTesla/StudyPhoneNumberManager.git
 
-#进入源码目录
+# 进入源码目录
 cd StudyPhoneNumberManager
 
-#编译
+# 编译
 cmake CMakeLists.txt
 make
 
-#运行
+# 运行
 ./PhoneNumberManager
 ```
 ### Windows
