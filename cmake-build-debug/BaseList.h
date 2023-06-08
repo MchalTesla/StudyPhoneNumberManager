@@ -25,7 +25,8 @@ public:
     void push(void* newnode);
     void deleteList(void* node);
     void deleteList();
-    void exchangeList(void* newnode, void* node);
+    void coverList(void* newnode, void* node);
+    void exchangeList(void* node_1, void* node_2);
     virtual void* test_NewNode() = 0;
 };
 
