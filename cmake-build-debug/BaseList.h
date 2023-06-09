@@ -7,7 +7,7 @@
 #include <iostream>
 
 class BaseList {
-public:
+protected:
     BaseList* header = nullptr;
     BaseList* last = nullptr;
     BaseList* next = nullptr;
